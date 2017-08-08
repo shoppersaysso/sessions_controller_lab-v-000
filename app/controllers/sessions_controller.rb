@@ -4,11 +4,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-    sessio[:username] = params[:username]
+    session[:username] = params[:username]
     redirect_to '/'
   end
 
   def destroy
+    session.delete :username
   end
 
 end
